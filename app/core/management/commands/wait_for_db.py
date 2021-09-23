@@ -5,8 +5,8 @@ from django.db.utils import OperationalError
 from django.core.management.base import BaseCommand
 
 
-# This is bullshit! Problem was not solved! 
-# The first connection is successful, but after that postgres closes the connection and 
+# This is bullshit! Problem was not solved!
+# The first connection is successful, but after that postgres closes the connection and
 # reconnects. At the moment, this script has already worked, so the application container crashes.
 class Command(BaseCommand):
     '''Django command to pause execution until database is avaliable'''
